@@ -6,7 +6,8 @@
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
+        "runtime": "python3.9",
+        "installCommand": "yum install -y git-lfs || apt-get install -y git-lfs || apk add git-lfs; git lfs install; git lfs fetch; git lfs checkout"
       }
     },
     {
@@ -48,6 +49,7 @@
     }
   ],
   "env": {
-    "DJANGO_SETTINGS_MODULE": "myeyelevel_django.settings"
+    "DJANGO_SETTINGS_MODULE": "myeyelevel_django.settings",
+    "GIT_LFS_SKIP_SMUDGE": "0"
   }
 }
