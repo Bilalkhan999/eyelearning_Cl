@@ -13,9 +13,30 @@
   "routes": [
     {
       "src": "/static/(.*)",
+      "dest": "/static/$1",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       }
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/static/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/static/js/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/static/images/$1"
+    },
+    {
+      "src": "/fonts/(.*)",
+      "dest": "/static/fonts/$1"
+    },
+    {
+      "src": "/Upload/(.*)",
+      "dest": "/static/images/Upload/$1"
     },
     {
       "src": "/(.*)",
