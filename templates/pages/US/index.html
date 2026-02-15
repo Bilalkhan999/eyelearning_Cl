@@ -413,23 +413,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <!-- EYES-499 : 2024-02-13 추가  -->
 						<div class="videoArea ac" data-aos-delay="200" data-aos="fade-up" data-aos-duration="1000">
-                            <video controls muted>
-                                <source src="/images/cn/mainpage_video_engsub.mp4">
-                            </video>
-                        </div>
-                        <script>
-                            $(function(){
-                                $(window).scroll(function(){
-                                    var videoTop = $('#MAIN_CONTENT1 .imageArea').offset().top;
-                                    var video = $('.videoArea').find('video');
-                                    
-                                    if( $(document).scrollTop() > videoTop ){
-                                        video.get(0).play();
-                                    }
-                                });
-                            });
-                        </script>
-                        <!-- //EYES-499 : 2024-02-13 추가  -->
+							<video controls muted playsinline preload="metadata" poster="/images/main/main_galley_01.png">
+								<source src="/images/cn/mainpage_video_engsub_720p_fast.mp4" type="video/mp4">
+							</video>
+						</div>
+						<!-- //EYES-499 : 2024-02-13 추가  -->
 					</div>
 				</div>
 				<!-- MAIN CONTENT 1 -->
