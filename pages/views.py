@@ -94,6 +94,7 @@ def contact_us(request):
         programs_str = ', '.join(programs) if programs else 'None selected'
         
         # Build email message
+        center_link = 'https://share.google/vpuc1tl6AtqNCd52n'
         subject = f"Eye Level Contact Form | {center_name or 'Center not provided'} | {full_name or 'Name not provided'}"
         body = f"""New contact form submission:
 
@@ -107,6 +108,7 @@ Student Information:
 
 Center:
 - Name: {center_name or 'Not provided'}
+- Link: {center_link}
 
 Center ID: {center_no}
 
@@ -212,6 +214,8 @@ def contact_proc(request):
     )
     programs_str = ', '.join(programs) if programs else 'None selected'
 
+    center_link = 'https://share.google/vpuc1tl6AtqNCd52n'
+
     subject = f"Eye Level Contact Form | {center_name or 'Center not provided'} | {full_name or 'Name not provided'}"
     body = f"""New contact form submission:
 
@@ -225,6 +229,7 @@ Student Information:
 
 Center:
 - Name: {center_name or 'Not provided'}
+- Link: {center_link}
 
 Center ID: {center_no}
 
